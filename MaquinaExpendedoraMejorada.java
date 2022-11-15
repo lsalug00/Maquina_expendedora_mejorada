@@ -87,7 +87,8 @@ public class MaquinaExpendedoraMejorada {
             System.out.println("# Billete de tren:");
             System.out.println("# De " + estacionOrigen + " a " + estacionDestino);
             System.out.println("# " + precioBillete + " euros.");
-            if(premio == true){
+            int prob = (billetesVendidos + 1) % 4;
+            if(premio == true && prob == 0){
                 double descuento = precioBillete / 4.0;
                 System.out.println(descuento + "€ de descuento en Mercadona");
                 System.out.println("##################");
